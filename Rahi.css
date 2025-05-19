@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element dimensions */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #fbbf24;
+    color: white;
+    padding: 20px;
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Auto height for small screens */
+    position: relative; /* Relative positioning for small screens */
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #d97706;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 0; /* No margin on small screens */
+    padding: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #f59e0b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d97706;
+}
+
+/* Info Section */
+.info {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Auto height for small screens */
+    background-color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative; /* Relative positioning for small screens */
+    padding: 20px 0; /* Add padding for spacing */
+}
+
+.info h4 {
+    margin: 10px 0;
+    padding-top: 20px;
+    text-align: center;
+    color: #fbbf24;
+}
+
+.info ul {
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow list items to wrap on small screens */
+    gap: 1rem; /* Reduce gap for small screens */
+    margin: 0;
+}
+
+.info ul li {
+    margin-bottom: 0;
+}
+
+.info ul li a {
+    color: #fbbf24;
+    text-decoration: none;
+}
+
+.info ul li a:hover {
+    text-decoration: underline;
+}
+
+/* OP Section */
+.op {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Auto height for small screens */
+    background-color: #ffffff;
+    border: 2px solid black;
+    margin: 20px 0; /* Adjust margin for small screens */
+    display: block;
+    position: relative; /* Relative positioning for small screens */
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    /* Adjustments for tablets and larger screens */
+    .sidebar {
+        width: 200px;
+        height: 100vh;
+        position: fixed; /* Fixed positioning for larger screens */
+    }
+
+    .main-content {
+        margin-left: 250px; /* Add margin for sidebar */
+    }
+
+    .info {
+        width: calc(100% - 200px); /* Adjust width to account for sidebar */
+        position: fixed; /* Fixed positioning for larger screens */
+        bottom: 0;
+        right: 0;
+    }
+
+    .op {
+        width: calc(100% - 200px); /* Adjust width to account for sidebar */
+        position: fixed; /* Fixed positioning for larger screens */
+        right: 0;
+        
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Adjustments for desktops and larger screens */
+    .info ul {
+        gap: 2rem; /* Increase gap for larger screens */
+    }
+}
